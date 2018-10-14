@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>CSS Grid</title>
+    <style>
+        
+        body {
+            background: #e0e0e0;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(50px, auto);
+        }
+
+        .header .header-title {
+            text-align: center;
+        }
+
+        .header {
+            display: grid;
+            text-align: center;
+            grid-row: 3;
+        }
+
+        #grid .header .logininfo {
+            display: none;
+        }
+
+        #grid .logininfo-top {
+            text-align: right;
+        }
+
+        #grid .menu {
+            grid-row: 2;
+        }
+
+        .menu .menu-title {
+            text-align: center;
+            color: #fff;
+        }
+        
+        @media(min-width: 576px)
+        {
+            #grid {
+                grid-template-columns: 2fr 3fr;
+            }
+            .header {
+                grid-column: 2 / 3;
+                grid-template-columns: 2fr 1fr;
+                grid-row: 1;
+            }
+            .header .header-title {
+                text-align: left;
+            }
+
+            .header .logininfo {
+                text-align: right;
+            }
+
+            #grid .logininfo-top {
+                display: none;
+            }
+
+            #grid .menu {
+                grid-row: 1 / 4;
+            }
+
+            #grid .header .logininfo {
+                display: block;
+            }
+            .footer2 {
+                grid-column: 2 /3;
+            }
+        }
+        
+        #grid > div {
+            padding: 10px
+        }
+
+        @media(min-width: 768px)
+        {
+            #grid {
+                grid-template-columns: 1fr 2fr;
+            }
+            .content {
+                min-height: 87vh;
+            }
+        }
+
+        @media(min-width: 992px)
+        {
+            #grid {
+                grid-template-columns: 1fr 3fr;
+            }
+        }
+
+        @media(min-width: 1200px)
+        {
+            #grid {
+                grid-template-columns: 0.7fr 3fr;
+            }
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+</head>
+<body>
+    <div id="grid">
+        <div class="logininfo-top">
+            Login Info
+        </div>
+        <div class="header">
+            <div class="logo">
+                <h2 class="header-title">Header Title</h2>
+            </div>
+            <div class="logininfo">
+                Login info
+            </div>
+        </div>
+        <div class="menu navbar-dark bg-dark">
+            <div class="menu-title">
+                <h2><img src="holder.js/200x90" class="img-fluid"></h2>
+            </div>
+            <nav class="navbar">
+            <ul class="navbar-nav nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quibusdam illum. Veniam impedit minima, praesentium laborum voluptates, unde obcaecati odit aliquam explicabo commodi fuga perspiciatis, iste a optio. Veniam, inventore?
+                Tempore optio corporis saepe fugiat nam placeat voluptas nesciunt earum debitis hic laborum cumque, repellendus eaque beatae culpa soluta nobis veritatis dolore odio officiis quos! Deserunt praesentium necessitatibus perferendis tenetur.
+                Aliquid totam, numquam voluptates nulla enim quae, culpa quasi impedit quibusdam commodi est nam adipisci id at unde vel expedita odio. Cupiditate laborum modi itaque fugit temporibus quis odit quisquam!
+                Ullam corrupti id explicabo reprehenderit molestiae adipisci blanditiis neque debitis iusto tempore! Eos nemo modi iste, mollitia, dolores molestias non recusandae minima exercitationem, amet optio eaque labore accusamus itaque veritatis.
+                Voluptas dolorum expedita deleniti dolor perferendis omnis facilis aperiam magnam ipsum adipisci commodi quas, similique delectus nisi earum iure ducimus rerum numquam repellat. Saepe adipisci hic deleniti pariatur ipsam cumque.
+                Officia laborum consectetur odio, perferendis quae cumque illum et aliquid ratione. Omnis expedita ex aliquam consequatur. Eveniet nam accusamus nulla eius quasi esse veniam, adipisci provident, quod delectus cumque! Eligendi?
+                Accusamus aut cupiditate in quaerat amet odio odit exercitationem expedita. Reprehenderit animi doloremque facere quisquam dolores incidunt asperiores laborum delectus repellendus ducimus amet debitis, architecto dolore error iste nobis qui!
+                Necessitatibus dolorem, earum corporis quisquam quibusdam sunt culpa vel possimus consequatur qui illum! Ut, at nam saepe excepturi et non, illo fuga dolor iure debitis quo impedit doloremque laborum obcaecati?
+                Illo culpa aliquam velit nemo fugit quibusdam obcaecati alias pariatur quisquam provident! Ab esse ducimus id eius rerum molestias distinctio excepturi, placeat dolores unde iste quasi! Saepe veniam voluptatibus necessitatibus?
+                Alias doloremque dolor quae distinctio omnis odio. Cupiditate qui autem molestiae? Maxime officiis ullam error deleniti? Dolorem minus, nesciunt sint eveniet, dolores incidunt esse, dignissimos autem rem repellendus fugit nam!
+                Corporis aperiam velit cum neque, exercitationem asperiores soluta officia molestias consequatur perferendis iure deleniti amet mollitia a quam ullam dolorum voluptatibus voluptatum illum nemo laudantium dolores nihil? Fugiat, tempora facere.
+                Quisquam accusantium ullam, repudiandae provident ut et reiciendis adipisci! Hic fugiat saepe eveniet tempora voluptate qui obcaecati asperiores magnam alias doloremque laboriosam enim minus ipsa, atque cumque! Deleniti, dignissimos dolor?
+                Accusamus, animi? Tempore quia, nulla eum perspiciatis fugiat optio inventore quidem doloribus esse doloremque nisi voluptatum aperiam officiis, dicta corrupti quasi. Accusantium laboriosam voluptatibus vitae iure totam natus consequuntur? Illum!
+                Laboriosam vel perferendis nesciunt nihil, perspiciatis vero architecto eum reiciendis, repellat unde veritatis dolor natus ipsa laborum maxime fugiat adipisci alias voluptatibus, iure tenetur? Eveniet dolorum quo illo voluptate hic!
+                Eum veniam tenetur veritatis. Quaerat, officia impedit tempora cupiditate aliquam neque libero omnis ratione assumenda autem, officiis, culpa quo ducimus. Cupiditate, perspiciatis facilis? Quia perferendis, saepe illum odit libero vel.
+                Commodi aperiam porro est accusantium dolorem quam assumenda id tempore voluptatum nihil sunt illo ad quas, provident culpa facere perferendis fuga libero facilis dolor dolorum cumque quasi! Dolorem, amet deleniti!
+                Magni, nesciunt. Nemo quidem et quia, eveniet modi eaque nisi molestiae asperiores consectetur iste nostrum sed totam similique omnis explicabo incidunt distinctio officia veritatis! Repellat sequi ad quod aspernatur voluptate.
+                Atque, corrupti dolore culpa a rem natus laborum facilis perferendis nesciunt minus labore vitae repellendus cupiditate dolor provident, obcaecati distinctio ea quidem ad ex. Ratione exercitationem sapiente qui voluptatum dicta.
+                Illum nostrum voluptatum impedit sequi voluptatem, placeat fuga? Porro officiis temporibus voluptate eos aliquam quaerat atque deleniti aliquid iusto explicabo sequi nisi, dolores delectus architecto cumque soluta tenetur labore obcaecati?
+                Ullam eaque laboriosam inventore fugit ut quam eos, voluptatum consequuntur beatae possimus ducimus ipsam numquam aliquid est obcaecati eveniet delectus repellat iusto molestias suscipit eum voluptates laborum asperiores. Dolor, quo. </p>
+            </div>
+            <div class="footer2">
+                <p class="text-center">Footer</p>
+            </div>
+        </div>
+    </body>
+    </html>
